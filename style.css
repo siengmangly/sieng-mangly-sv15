@@ -6,9 +6,6 @@
     #invoice, #invoice * {
         visibility: visible;
     }
-    /* #invoice_txt{
-        visibility: visible;
-    } */
 
     #invoice {
         position: absolute;

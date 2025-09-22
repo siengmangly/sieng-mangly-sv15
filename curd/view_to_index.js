@@ -1,25 +1,3 @@
-// function image_load () {
-//     document.getElementById("Image").addEventListener("change", function () {
-//         // console.log(this.files);
-//         const reader = new FileReader();
-
-//         reader.addEventListener("load", () => {
-//             // console.log(reader.result);
-//             localStorage.setItem("recent_image", JSON.stringify(reader.result));
-//         });
-
-//         reader.readAsDataURL(this.files[0]);
-//     });
-
-//     document.addEventListener("DOMContentLoaded", () => {
-//         const recentimagedataUrl = JSON.parse(localStorage.getItem("recent_image") ?? []);
-
-//         if (recentimagedataUrl) {
-//             document.getElementById("item_img").setAttribute("src", recentimagedataUrl);
-//         }
-//     });
-// }
-
 let product_list = JSON.parse(localStorage.getItem("items")) ?? "[]";
 
 const order_detail = [];

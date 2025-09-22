@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sieng_Mangly_final_project</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-sidenav-show bg-gray-100>">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="pos.html">Welcome to my pos</a>
+            <button class="navbar-toggler hidden-lg-up" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                     <li class="nav-item">
+                        <a class="nav-link" href="pos.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                       <a href="crud.html" class="nav-link">Insert</a>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search" />
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-md-3">
+            
+        </div>
+    </div>
+    <div class="z-n1 position-absolute p-5 rounded-3"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row" id="render_product_card">
+                </div>
+            </div>
+            <div class="col" id="invoice">
+                <table class="table">
+                    <tr class="table-primary">
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th id="action">Action</th>
+                    </tr>
+                <tbody id="product_detail">
+
+                </tbody>
+                <table class="table">
+                    <tr>
+                        <td class="table-primary" rowspan="2">
+                            <h3>Total</h3>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="showTotal">0$</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="khTotal">0 KHR</td>
+                    </tr>
+                    <tr>
+                        <td>Discount</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><select class="form-select" id="Discount">
+                            <option></option>
+                            <option value="0">0%</option>
+                            <option value="100">100%</option>
+                            <option value="80">80%</option>
+                            <option value="60">60%</option>
+                            <option value="40">40%</option>
+                            <option value="20">20%</option>
+                            <option value="5">5%</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>After Discount</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="Display_Discount">0$</td>
+                    </tr>
+                    <tr>
+                        <td>Received</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="number" class="form-control" id="received"></td>
+                        <td><button class="btn btn-primary" id="btn_change">Submit Change</button></td>
+                    </tr>
+                    <tr>
+                        <td>Change</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="Display_change">0$</td>
+                    </tr>
+                    <tr class="table-primary">
+                        <td><h2>Grand Total</h2></td>
+                        <td><h2 id="Display_GrandTotal"></h2></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                           <div class="col">
+                             <button class="btn btn-success" id="btn_invoice"><h5>Print invoice</h5></button>
+                           </div>
+                        </td>
+                    </tr>
+                    </table>
+                </table>
+            </div>
+        </div>
+    </div>
+<script>
+    document.getElementById("btn_invoice").addEventListener("click", function () {
+    window.print();
+});
+</script>
+    <script src="curd/insert.js"></script>
+    <script src="curd/delete.js"></script>
+    <script src="curd/update.js"></script>
+    <script src="curd/input_img.js"></script>
+    <script src="curd/view_to_index.js"></script>
+</body>
+</html>
