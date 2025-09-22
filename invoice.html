@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js" integrity="sha512-D25Z8/1q2z65ZpJ3NzY6XiPZfwjhbv34OTQHDIZd+KPK+uWCovGt+fMkSzW8ArzCMFUgZt6Cdu7qoXNuy6a2GA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<body>
+
+    <div class="container" id="invoice">
+        <div class="container-fluid">
+            <h1><b>Invoice</b></h1>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="" class="text-label">
+                    <h1>Order List</h1>
+                </label>
+                <table class="table">
+                    <tr class="table-primary">
+                        <td>No.</td>
+                        <td>Product Name</td>
+                        <td>Price</td>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Meme</td>
+                            <td>100$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Discount:</h3>
+            </div>
+            <div class="col-md-2">
+                <h3>20%</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Description:</h3>
+            </div>
+            <div class="col-md-1">
+                <h3>Good</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h3></h3>
+            </div>
+            <div class="col-md-3">
+                <h3></h3>
+            </div>
+        </div>
+        <div class="">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <h3>Total</h3>
+                </div>
+                <div class="col-md-2">
+                    <h3>100 $</h3>
+                </div>
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <h3>Total KHR</h3>
+                </div>
+                <div class="col-md-2">
+                    <h3>10000000 KHR</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <button class="btn btn-primary" id="print_pdf">PRINT INVOICE</button>
+    </div>
+    <script>
+        let invoice = document.getElementById("invoice");
+        let btn = document.getElementById("print_pdf");
+
+        btn.addEventListener("click" , function () {
+            html2pdf().from(invoice).save();
+        })
+    </script>
+</body>
+</html>

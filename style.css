@@ -1,0 +1,23 @@
+
+  @media print {
+    body * {
+        visibility: hidden;
+    }
+    #invoice, #invoice * {
+        visibility: visible;
+    }
+    /* #invoice_txt{
+        visibility: visible;
+    } */
+
+    #invoice {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    #btn_change { display: none; }
+    #btn_invoice { display: none; }
+    #btn_remove {display: none;}
+    #action {display: none;}
+}
