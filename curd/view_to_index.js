@@ -106,7 +106,7 @@ function Product_total() {
 
             const Grand_total = after_discount;
             const btn_change = document.getElementById("btn_change");
-            const received = document.getElementById("btn_change");
+            const received = document.getElementById("received");
 
             const discplayChange = document.getElementById("Display_change");
             btn_change.addEventListener("click", function () {
@@ -119,6 +119,8 @@ function Product_total() {
                 discplayChange.innerText = total.toFixed(2) + "$";
             })
         };
+
+     
     });
     console.log(total);
     
